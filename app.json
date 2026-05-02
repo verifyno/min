@@ -1,0 +1,72 @@
+{
+  "name": "POPKID-MD",
+  "description": "WhatsApp bot deployable on Heroku",
+  "repository": "https://github.com/your-username/your-repo",
+  "logo": "https://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["whatsapp", "bot", "baileys", "nodejs"],
+  "env": {
+    "PREFIX": {
+      "description": "Bot command prefix",
+      "value": "."
+    },
+    "MODE": {
+      "description": "Bot mode: public or private",
+      "value": "public"
+    },
+    "OWNER_NUMBER": {
+      "description": "Owner WhatsApp number in international format (digits only)",
+      "required": true
+    },
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Telegram bot token (required only if Telegram features are used)",
+      "required": false
+    },
+    "TELEGRAM_CHAT_ID": {
+      "description": "Telegram chat id (required only if Telegram features are used)",
+      "required": false
+    },
+    "AUTO_REACT": {
+      "description": "Auto react to messages (true/false)",
+      "value": "true"
+    },
+    "ANTI_CALL": {
+      "description": "Block incoming calls automatically (true/false)",
+      "value": "false"
+    },
+    "AUTO_STATUS_SEEN": {
+      "description": "Automatically view WhatsApp status updates (true/false)",
+      "value": "true"
+    },
+    "AUTO_STATUS_REACT": {
+      "description": "Automatically react to WhatsApp status updates (true/false)",
+      "value": "true"
+    },
+    "AUTO_STATUS_REPLY": {
+      "description": "Automatically reply to WhatsApp status updates (true/false)",
+      "value": "false"
+    },
+    "AUTO_STATUS_MSG": {
+      "description": "Auto reply message for status updates",
+      "required": false
+    },
+    "READ_MESSAGE": {
+      "description": "Auto mark messages as read (true/false)",
+      "value": "true"
+    },
+    "CUSTOM_REACT": {
+      "description": "Use custom react emoji list (true/false)",
+      "value": "false"
+    },
+    "CUSTOM_REACT_EMOJIS": {
+      "description": "Comma-separated emojis for custom reactions",
+      "value": "🥲,😂,👍🏻,🙂,😔"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "stack": "heroku-24"
+}
