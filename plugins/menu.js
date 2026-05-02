@@ -2,7 +2,6 @@ const config = require('../config');
 const moment = require('moment-timezone');
 const { cmd, commands } = require('../command');
 
-const MENU_IMAGE_URL = "https://files.catbox.moe/aapw1p.png";
 
 // =====================
 // Simple Greeting Logic
@@ -124,8 +123,7 @@ async (conn, mek, m, { from, sender, pushName, reply }) => {
         // SEND MENU WITH FAKEV-CARD QUOTED
         // =====================
         await conn.sendMessage(from, {
-            image: { url: MENU_IMAGE_URL },
-            caption: menu,
+            text: menu,
             contextInfo: {
                 ...newsletterContextInfo,
                 externalAdReply: {
